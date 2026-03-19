@@ -82,15 +82,50 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
             </div>
           ) : (
-            <a
-              href={resumeFileUrl}
-              target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
-              rel="noreferrer"
-            >
-              Download Resume
-            </a>
+            //   <a
+            //     href={resumeFileUrl}
+            //     target="_blank"
+            //     className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
+            //     download
+            //     rel="noreferrer"
+            //   >
+            //     Download Resume
+            //   </a>
+            <div className="mt-6 flex gap-2 justify-center">
+              {/* <a
+                href={resumeFileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline btn-sm text-xs opacity-70"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(resumeFileUrl, '_blank');
+                }}
+              >
+                View Resume
+              </a> */}
+              <button
+                className="btn btn-outline btn-sm text-xs opacity-70"
+                onClick={() => {
+                  fetch(resumeFileUrl)
+                    .then((res) => res.blob())
+                    .then((blob) => {
+                      const url = URL.createObjectURL(blob);
+                      window.open(url, '_blank');
+                    });
+                }}
+              >
+                View Resume
+              </button>
+
+              <a
+                href={resumeFileUrl}
+                download
+                className="btn btn-outline btn-sm text-xs opacity-50"
+              >
+                Download Resume
+              </a>
+            </div>
           ))}
       </div>
     </div>

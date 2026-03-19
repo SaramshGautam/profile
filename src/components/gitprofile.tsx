@@ -203,7 +203,8 @@ const GitProfile = ({ config }: { config: Config }) => {
                     profile={profile}
                     loading={loading}
                     avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}
-                    resumeFileUrl={sanitizedConfig.resume.fileUrl}
+                    // resumeFileUrl={sanitizedConfig.resume.fileUrl}
+                    resumeFileUrl={`${import.meta.env.BASE_URL}resume.pdf`}
                   />
                   <DetailsCard
                     profile={profile}

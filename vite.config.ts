@@ -34,6 +34,7 @@ export default defineConfig({
             registerType: 'autoUpdate',
             workbox: {
               navigateFallback: undefined,
+              navigateFallbackDenylist: [/\.pdf$/],
             },
             includeAssets: ['logo.png'],
             manifest: {
