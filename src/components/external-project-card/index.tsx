@@ -98,15 +98,16 @@ const ExternalProjectCard = ({
                     {item.title}
                   </h2>
                   {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-24 h-24 mask mask-squircle">
+                    <div className="w-full mb-4 opacity-90">
+                      <div className="w-full aspect-video rounded-xl overflow-hidden">
                         <LazyImage
                           src={item.imageUrl}
-                          alt={'thumbnail'}
+                          alt={item.title}
+                          className="w-full h-full object-cover"
                           placeholder={skeleton({
                             widthCls: 'w-full',
                             heightCls: 'h-full',
-                            shape: '',
+                            shape: 'rounded-xl',
                           })}
                         />
                       </div>

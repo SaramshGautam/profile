@@ -4,7 +4,6 @@ interface Github {
    */
   username: string;
 }
-
 interface GitHubProjects {
   /**
    * Display GitHub projects?
