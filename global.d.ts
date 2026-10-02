@@ -243,6 +243,10 @@ interface Publication {
   authors?: string;
   link?: string;
   description?: string;
+  /** Cover image shown on the card (e.g. a key figure from the paper) */
+  imageUrl?: string;
+  /** Short keyword chips shown under the description */
+  keywords?: string[];
 }
 
 interface GoogleAnalytics {

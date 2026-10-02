@@ -43,7 +43,7 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'My Projects',
+      header: 'Ongoing Research Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
@@ -59,6 +59,13 @@ const CONFIG = {
             'PolyFlux is an innovative platform designed to facilitate collaborative creativity and idea sharing among users. It provides a dynamic and interactive canvas where individuals can contribute, modify, and enhance content in real-time, fostering a rich environment for brainstorming and project development.',
           imageUrl: '/profile/polyflux.png',
           link: 'https://example.com',
+        },
+        {
+          title: 'Shared Canvas for Group Ideation',
+          description:
+            "A real-time, multimodal infinite canvas where remote teams collect and freely arrange text, images, sketches, audio, video and shapes on one shared space. Live cursors, a shared usage log of every member's actions and a minimap keep the group aware of who is doing what, while fine-grained interaction logging let us study how spatial arrangement drives coordination and emergent roles (ACM GROUP 2027).",
+          imageUrl: '/profile/shared-canvas.png',
+          link: '',
         },
       ],
     },
@@ -145,15 +152,32 @@ const CONFIG = {
     },
   ],
   publications: [
+    // {
+    //   title:
+    //     'LINC: Supporting Language Independent Communication and Comprehension to Enhance Contribution in Multilingual Collaborative Meetings',
+    //   conferenceName: '',
+    //   journalName: 'arXiv',
+    //   authors: 'Saramsh gautam, Mahmood Jasim',
+    //   link: 'https://doi.org/10.48550/arXiv.2504.18988',
+    //   description:
+    //     'LINC is a multimodal system that helps ESL researchers participate fully in multilingual meetings which combines real-time communication support with a post-meeting dashboard for review and follow-up. Built from a survey of 62 ESL researchers and evaluated with six multilingual teams, it improved participation, comprehension, and meeting preparation for non-native English speakers.',
+    // },
     {
       title:
-        'LINC: Supporting Language Independent Communication and Comprehension to Enhance Contribution in Multilingual Collaborative Meetings',
-      conferenceName: '',
-      journalName: 'arXiv',
-      authors: 'Saramsh gautam, Mahmood Jasim',
-      link: 'https://doi.org/10.48550/arXiv.2504.18988',
+        'From Artifacts to Coordination: Exploring How Shared Canvases Drive Collaboration during Group Ideation',
+      conferenceName: 'ACM GROUP 2027',
+      journalName: 'PACMHCI',
+      authors: 'Saramsh Gautam, Andrew Webb, Mahmood Jasim',
+      link: '',
       description:
-        'LINC is a multimodal system that helps ESL researchers participate fully in multilingual meetings which combines real-time communication support with a post-meeting dashboard for review and follow-up. Built from a survey of 62 ESL researchers and evaluated with six multilingual teams, it improved participation, comprehension, and meeting preparation for non-native English speakers.',
+        'What happens when three people plan a trip together on a blank, infinite canvas? We studied seven remote triads and found that, with no predefined structure, where people placed sticky notes, images and maps did the coordinating for them: it signalled who was working on what, separated private exploration from the shared plan, and let roles, like a primary "canvas organizer", emerge on their own. We close with design implications for collaborative ideation tools.',
+      imageUrl: '/profile/group-canvas.jpg',
+      keywords: [
+        'Collaborative Ideation',
+        'Infinite Canvas',
+        'Spatial Coordination',
+        'CSCW',
+      ],
     },
     // {
     //   title: 'Publication Title',
@@ -193,7 +217,7 @@ const CONFIG = {
     displayAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: ['dracula', 'procyon'],
+    themes: ['dracula'],
   },
 
   // Optional Footer. Supports plain text or HTML.

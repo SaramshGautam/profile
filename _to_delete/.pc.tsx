@@ -103,7 +103,7 @@ const PublicationCard = ({
               <LazyImage
                 src={item.imageUrl}
                 alt={item.title}
-                className="absolute inset-0 w-full h-full object-cover object-left-top"
+                className="absolute inset-0 w-full h-full object-cover object-left-top transition-transform duration-500 group-hover:scale-105"
                 placeholder={skeleton({
                   widthCls: 'w-full',
                   heightCls: 'h-full',
