@@ -10,7 +10,7 @@
 } */
 
 @plugin "daisyui" {
-  themes: 'dracula', 'procyon';
+  themes: 'dracula';
 }
 
 @plugin "daisyui/theme" {
